@@ -1,0 +1,60 @@
+<?php 
+			include('connect.php');
+			$query="SELECT ISBN,TITLE FROM book";
+
+            if(!($result = mysqli_query($conn,$query))){
+
+                echo "Retrieval of data from database failed".mysql_error();
+            }
+            if(mysqli_num_rows($result)>0){
+
+                while ($row=mysqli_fetch_assoc($result)){
+
+                    echo "<tr><td>".$row["ISBN"]."</td><td>".$row["TITLE"]."</td></tr>";
+                }
+            }
+            else{
+
+                echo "0 Results";
+            }
+
+            mysqli_close($conn)?>
+
+
+
+$sql = "DELETE FROM MyGuests WHERE id=3";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Record deleted successfully";
+} else {
+  echo "Error deleting record: " . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
+$sql = "UPDATE MyGuests SET lastname='Doe' WHERE id=2";
+
+if (mysqli_query($conn, $sql)) {
+  echo "Record updated successfully";
+} else {
+  echo "Error updating record: " . mysqli_error($conn);
+}
+
+mysqli_close($conn);
+
+
+
+
+
+UPDATE Customers
+SET ContactName = 'Alfred Schmidt', City= 'Frankfurt'
+WHERE CustomerID = 1;
+
+select renew_date from issued_books
+
+$ISBN_ERR = $_SESSION['err_message'] ?? null;
+/*if(isset($ISBN_ERR)){
+	unset($_SESSION['err_message']);
+} 
+*/
