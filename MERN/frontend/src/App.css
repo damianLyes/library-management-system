@@ -1,0 +1,32 @@
+.cent-items{
+  height: 10rem;
+  display: flex;
+  align-items: center;
+  /* justify-content: center; */
+  flex-direction: column;
+  /* flex-wrap: wrap; */
+}
+
+.sidebar {
+  width: 280px;
+  height: 100%;
+  position: fixed;
+  top: 60px;
+  left: -280px;
+  transition: left 0.3s ease-in-out;
+  background-color: #fff;
+  /* Add other styles as needed */
+}
+
+.sidebar.active {
+  left: 0;
+}
+
+.toggle-sidebar-btn {
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.toggle-sidebar-btn.active {
+  /*  active styles as needed */
+}
